@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package fakelogs;
+
+service FakeLogsService {
+    rpc FakeLogs (LogsRequest) returns (LogsReply) {}
+}
+
+message LogsRequest {
+    string logs = 1;
+}
+
+message LogsReply {
+    string message = 1;
+}
